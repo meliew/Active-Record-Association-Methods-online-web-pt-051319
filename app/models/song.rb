@@ -13,6 +13,7 @@ class Song < ActiveRecord::Base
 
     else
       Artist.create(name = "Drake")
+      song.artist("Drake")
 
     #find or create
 
