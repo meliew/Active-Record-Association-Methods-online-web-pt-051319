@@ -15,6 +15,8 @@ class Song < ActiveRecord::Base
       Artist.create(name = "Drake")
       song.artist("Drake")
 
+    end
+
     #find or create
 
     # look for Drake
