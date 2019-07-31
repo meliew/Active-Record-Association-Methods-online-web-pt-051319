@@ -3,7 +3,8 @@ class Artist < ActiveRecord::Base
   has_many :genres, through: :songs
 
   def get_genre_of_first_song
-    self.genre.song.first
+self.song.first
+
   end
 
   def song_count
