@@ -7,7 +7,22 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    
+
+    if Song.artist.exists?("Drake")
+      song.artist("Drake")
+
+    else
+      Artist.create(name = "Drake")
+
+    #find or create
+
+    # look for Drake
+    #if Drake exists, add the song
+    #if Drake does not exist, add Drake as an artist
+    #then add the song to Drake
+
+
+
     # when this method is called it should assign the song's artist to Drake
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
     # Hint: you won't want to create an artist record every time this method is called, only if an Drake is *not found*
